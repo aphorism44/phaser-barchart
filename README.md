@@ -1,4 +1,4 @@
-<h1><strong>Phaser.io Bargraph Plugin</strong></h1>
+<h1><strong>Phaser.io Barchart Plugin</strong></h1>
 <br>
 This is a plugin for Phaser.io,  a popular open source game framework.
 <br>
