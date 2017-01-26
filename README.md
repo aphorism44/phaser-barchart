@@ -15,11 +15,11 @@ On your index page, you need to reference a copy of the plugin code (phaser-barc
 
 </code>
 Within your game's first preload function, load the plugin with this command:
-<code>
+<pre>
 
 game.plugin = game.plugins.add(Phaser.Plugin.BarchartPlugin);
 
-</code>
+</pre>
 You are now able to use the plugin in your Phaser code.
 <br>
 <h3><strong>Usage</strong></h3>
@@ -27,11 +27,11 @@ You are now able to use the plugin in your Phaser code.
 The plugin has two public methods: addChart and updateCharts.
 <br><br>
 The addChart method is used like this:
-<code>
+<pre>
 
 this.newChart = game.plugin.addChart(valueArray, x, y, width, height, label, hideLabels);
 
-</code>
+</pre>
 This will create a bar graph object. The variables are:
 <br><br>
 <ul>
@@ -45,15 +45,15 @@ This will create a bar graph object. The variables are:
 </ul>
 <br>
 Although a graph can be static, the second method, updateCharts, adds a dynamic functionality to the graph object it's called for, such as:
-<code>
+<pre>
 
 newChart.updateChart(newArray);
 
-</code>
+</pre>
 This command will update the entire graph, depending on the numbers used.
 <br><br>
 The easiest way to update the chart on a regular basis is to add a Phaser timer, then use that to call a function that updates both the array and the graph. For example:
-<code>
+<pre>
     this.numberArray = [1.2, 4.2, 5.1, 5.5, 6.3];
     ...
     this.anotherGraph = game.plugin.addChart(this.numberArray, 600, 100, 200, 100, "Another Graph");
@@ -65,7 +65,7 @@ The easiest way to update the chart on a regular basis is to add a Phaser timer,
         this.anotherGraph.updateChart(this.numberArray);
     };
     
-</code>
+</pre>
 <br>
 HINT: The best way to handle the updateChart array is to unshift new values to the front. It may also be useful to pop the oldest element, although this isn't necessary.
 <br>
