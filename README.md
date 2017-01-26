@@ -3,23 +3,23 @@
 This is a plugin for Phaser.io,  a popular open source game framework.
 <br>
 Specifically, it generates a bar graph from an array of numbers.
-<br><br>
+<br>
 <h3><strong>Setup</strong></h3>
-<br><br>
+<br>
 To use this plugin, please take the following steps:
 <br><br>
 On your index page, you need to reference a copy of the plugin code (phaser-barchart.js), like this:
-<pre>
+<code>
 
-    \<script src="vendor/phaser-barchart.js">\</script>"
+    <script src="vendor/phaser-barchart.js"></script>"
 
-</pre>
+</code>
 Within your game's first preload function, load the plugin with this command:
-<pre>
+<code>
 
 game.plugin = game.plugins.add(Phaser.Plugin.BarchartPlugin);
 
-</pre>
+</code>
 You are now able to use the plugin in your Phaser code.
 <br>
 <h3><strong>Usage</strong></h3>
@@ -27,11 +27,11 @@ You are now able to use the plugin in your Phaser code.
 The plugin has two public methods: addChart and updateCharts.
 <br><br>
 The addChart method is used like this:
-<pre>
+<code>
 
 this.newChart = game.plugin.addChart(valueArray, x, y, width, height, label, hideLabels);
 
-</pre>
+</code>
 This will create a bar graph object. The variables are:
 <br><br>
 <ul>
@@ -45,15 +45,15 @@ This will create a bar graph object. The variables are:
 </ul>
 <br>
 Although a graph can be static, the second method, updateCharts, adds a dynamic functionality to the graph object it's called for, such as:
-<pre>
+<code>
 
 newChart.updateChart(newArray);
 
-</pre>
+</code>
 This command will update the entire graph, depending on the numbers used.
 <br><br>
 The easiest way to update the chart on a regular basis is to add a Phaser timer, then use that to call a function that updates both the array and the graph. For example:
-<pre>
+<code>
     this.numberArray = [1.2, 4.2, 5.1, 5.5, 6.3];
     ...
     this.anotherGraph = game.plugin.addChart(this.numberArray, 600, 100, 200, 100, "Another Graph");
@@ -65,7 +65,7 @@ The easiest way to update the chart on a regular basis is to add a Phaser timer,
         this.anotherGraph.updateChart(this.numberArray);
     };
     
-</pre>
+</code>
 <br>
 HINT: The best way to handle the updateChart array is to unshift new values to the front. It may also be useful to pop the oldest element, although this isn't necessary.
 <br>
@@ -109,7 +109,7 @@ Suppose, for some strange reason, the game had a timer, and you wanted to see wh
    </li>
    <li>Finally, you'll need to update the score graph every second. HINT: if you already made a function to handle the timed update of the score array, you should be able to put it there.</li>
 </ol>
-<br><br>
+<br>
 If you succeeded, you should see a game like this. Graphing scores doesn't seem very useful, but there are many games where this will help.
 <br><br>
 CHEAT: If you want to see the finished code for this, look for the file called "finished.html" in the assets folder. But please try to solve it yourself first.
