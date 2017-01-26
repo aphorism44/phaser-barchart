@@ -11,7 +11,7 @@ To use this plugin, please take the following steps:
 On your index page, you need to reference a copy of the plugin code (phaser-barchart.js), like this:
 <code>
 
-    <script src="vendor/phaser-barchart.js"></script>"
+    <script src="vendor/phaser-barchart.js"></script>
 
 </code>
 Within your game's first preload function, load the plugin with this command:
