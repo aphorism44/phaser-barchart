@@ -1,9 +1,10 @@
-<h1><strong>Phaser.io Barchart Plugin</strong></h1>
+<h1><strong>Phaser.io Barchart Plugin</strong></h1>![GameWithGraph](assets/phaserLogo.png)
 <br>
 This is a plugin for Phaser.io,  a popular open source game framework.
 <br>
 Specifically, it generates a bar graph from an array of numbers.
 <br>
+![GameWithGraph](assets/git1.png)
 <h3><strong>Setup</strong></h3>
 <br>
 To use this plugin, please take the following steps:
@@ -83,6 +84,7 @@ I have tried to make this plugin as robust and flexible as possible. Among these
 <br>
 <h3><strong>Examples</strong></h3>
 <br>
+![GameWithGraph](assets/git2.png)
 My idle game at Newgrounds, <a href="http://www.newgrounds.com/portal/view/687176" target="_blank"><em>The Townsfolk Cartel</em></a>, is the first place I used this plugin (in fact, I created the plugin because that game needed this functionality). When playing the game, press on the "Statistics" button. The graph there shows the last 90 days or so of income, so that players can see how they're doing.
 <br><br>
 If you open the index.html page in this directory, you will see several different style of graph, all created with the plugin. The main.js file creates and updates all the graphs. The code in the create function creates five graphs, while the timerUpdate function updates three of them, along with their number arrays.
@@ -91,6 +93,7 @@ If you open the index.html page in this directory, you will see several differen
 <br>
 To demonstrate how this plugin works, I will demonstrate how to add a graph to an existing Phaser.io program. For this, I have included the code from Phaser.io that is <a href="http://phaser.io/tutorials/making-your-first-phaser-game", target="_blank">used as a tutorial for newcomers</a>. To see this, open the tutorial.html file instead of index.html. The game should start immediately.
 <br><br>
+![GameWithGraph](assets/git3.png)
 As you can see, the game is extremely simple. You just need to move the character around with arrow keys and collect starts for points.
 <br><br>
 Suppose, for some strange reason, the game had a timer, and you wanted to see what the score was for each second. This is your exercise - make the following modifications to the tutorial.html file:
@@ -111,5 +114,6 @@ Suppose, for some strange reason, the game had a timer, and you wanted to see wh
 </ol>
 <br>
 If you succeeded, you should see a game like this. Graphing scores doesn't seem very useful, but there are many games where this will help.
+![GameWithGraph](assets/git4.png)
 <br><br>
 CHEAT: If you want to see the finished code for this, look for the file called "finished.html" in the assets folder. But please try to solve it yourself first.
