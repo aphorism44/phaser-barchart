@@ -24,7 +24,7 @@ You are now able to use the plugin in your Phaser code.
 <br>
 <h3><strong>Usage</strong></h3>
 <br>
-The plugin has two public methods: addChart and updateCharts.
+The plugin has two public methods: <strong>addChart</strong> and <strong>updateChart</strong>.
 <br><br>
 The addChart method is used like this:
 <pre>
@@ -44,7 +44,7 @@ This will create a bar graph object. The variables are:
     <li><strong>hideLabels (optional)</strong>. If this is set to "true," the graph will not show its label, nor will it mark the y-axis. By default this is "false."</li>
 </ul>
 <br>
-Although a graph can be static, the second method, updateCharts, adds a dynamic functionality to the graph object it's called for, such as:
+Although a graph can be static, the second method, updateChart, adds a dynamic functionality to the graph object it's called for, such as:
 <pre>
 
 newChart.updateChart(newArray);
@@ -76,18 +76,18 @@ I have tried to make this plugin as robust and flexible as possible. Among these
 <ul>
     <li>The plugin will automatically determine the y-axis numerical labels based on the highest and lowest numbers in the array.</li>
     <li>If a graph is updated with a larger (or smaller) array, the plugin adjusts the bar width every time the array size changes.</li>
-    <li>The plugin can generate numerous graphs, in case someone decides to place two of them at once.</li>
-    <li> If the plugin determines the array is too large to properly display the graph (the number of elements must be less than or equal to half of the graph's width, it will remove items from the end of the array.</li>
+    <li>The plugin can generate numerous graphs, in case someone decides to place two or more of them at once.</li>
+    <li> If the plugin determines the array is too large to properly display the graph (the number of elements must be less than or equal to half of the graph's width), it will remove items from the end of the array.</li>
     <li>Graphs can handle both positive and negative numbers. In addition, graphs can plot both positive and negative points at the same time. In this case, the graph will determine a "zero point," then plot positive numbers (green, with bars pointing upwards) and negative numbers (red, pointing downwards), all from the zero point.</li>
 </ul>
 <br>
 <h3><strong>Examples</strong></h3>
 <br>
-My idle game at Newgrounds, <a href="http://www.newgrounds.com/portal/view/687176" target=="_blank"><em>The Townsfolk Cartel</em></a>, is the first place I used it. When playing the game, press on the "Statistics" button. The graph there shows the last 90 days or so of income, so that players can see how they're doing.
+My idle game at Newgrounds, <a href="http://www.newgrounds.com/portal/view/687176" target="_blank"><em>The Townsfolk Cartel</em></a>, is the first place I used this plugin (in fact, I created the plugin because that game needed this functionality). When playing the game, press on the "Statistics" button. The graph there shows the last 90 days or so of income, so that players can see how they're doing.
 <br><br>
 If you open the index.html page in this directory, you will see several different style of graph, all created with the plugin. The main.js file creates and updates all the graphs. The code in the create function creates five graphs, while the timerUpdate function updates three of them, along with their number arrays.
 <br>
-<h3><strong>A Quick Tutorial</strong></h3>
+<h3><strong>A Tutorial Exercise</strong></h3>
 <br>
 To demonstrate how this plugin works, I will demonstrate how to add a graph to an existing Phaser.io program. For this, I have included the code from Phaser.io that is <a href="http://phaser.io/tutorials/making-your-first-phaser-game", target="_blank">used as a tutorial for newcomers</a>. To see this, open the tutorial.html file instead of index.html. The game should start immediately.
 <br><br>
@@ -107,7 +107,7 @@ Suppose, for some strange reason, the game had a timer, and you wanted to see wh
             
         </ul>
    </li>
-   <li>Finally, you'll need to update the score graph every second. HINT: if you already made a function to handle the timed update of the score array, you should be able to put it there.</li>
+   <li>Finally, you'll need to update the score graph every second. HINT: if you already made a function to handle the timed update of the score array, you should be able to include the graph update there.</li>
 </ol>
 <br>
 If you succeeded, you should see a game like this. Graphing scores doesn't seem very useful, but there are many games where this will help.
