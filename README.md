@@ -91,7 +91,7 @@ If you open the index.html page in this directory, you will see several differen
 <br>
 <h3><strong>A Tutorial Exercise</strong></h3>
 <br>
-To demonstrate how this plugin works, I will demonstrate how to add a graph to an existing Phaser.io program. For this, I have included the code from Phaser.io that is <a href="http://phaser.io/tutorials/making-your-first-phaser-game", target="_blank">used as a tutorial for newcomers</a>. To see this, open the tutorial.html file instead of index.html. The game should start immediately.
+To demonstrate how this plugin works, I will show how to add a graph to an existing Phaser.io program. For this, I have included the code from Phaser.io that is <a href="http://phaser.io/tutorials/making-your-first-phaser-game", target="_blank">used as a tutorial for newcomers</a>. To see this, open the tutorial.html file instead of index.html. The game should start immediately.
 <br><br>
 ![GameWithoutGraph](assets/git3.png)
 As you can see, the game is extremely simple. You just need to move the character around with arrow keys and collect starts for points.
