@@ -4,15 +4,14 @@ This is a plugin for Phaser.io,  a popular open source game framework.
 <br>
 Specifically, it generates a bar graph from an array of numbers.
 <br><br>
-<strong>Setup</strong>
+<h3><strong>Setup</strong></h3>
 <br><br>
 To use this plugin, please take the following steps:
 <br><br>
 On your index page, you need to reference a copy of the plugin code (phaser-barchart.js), like this:
-<br><br>
 <pre>
 
-    <script src="vendor/phaser-barchart.js"></script>
+    \<script src="vendor/phaser-barchart.js">\</script>"
 
 </pre>
 Within your game's first preload function, load the plugin with this command:
@@ -20,17 +19,17 @@ Within your game's first preload function, load the plugin with this command:
 
 game.plugin = game.plugins.add(Phaser.Plugin.BarchartPlugin);
 
-<</pre>
+</pre>
 You are now able to use the plugin in your Phaser code.
-<br><br>
+<br>
 <h3><strong>Usage</strong></h3>
-<br><br>
+<br>
 The plugin has two public methods: addChart and updateCharts.
 <br><br>
 The addChart method is used like this:
 <pre>
 
-<em>this.newChart = game.plugin.addChart(valueArray, x, y, width, height, label, hideLabels);</em>
+this.newChart = game.plugin.addChart(valueArray, x, y, width, height, label, hideLabels);
 
 </pre>
 This will create a bar graph object. The variables are:
@@ -44,7 +43,7 @@ This will create a bar graph object. The variables are:
     <li><strong>label</strong>. A string placed above the graph; usually a description.</li>
     <li><strong>hideLabels (optional)</strong>. If this is set to "true," the graph will not show its label, nor will it mark the y-axis. By default this is "false."</li>
 </ul>
-<br><br>
+<br>
 Although a graph can be static, the second method, updateCharts, adds a dynamic functionality to the graph object it's called for, such as:
 <pre>
 
@@ -69,9 +68,9 @@ The easiest way to update the chart on a regular basis is to add a Phaser timer,
 </pre>
 <br>
 HINT: The best way to handle the updateChart array is to unshift new values to the front. It may also be useful to pop the oldest element, although this isn't necessary.
-<br><br>
+<br>
 <h3><strong>Useful Features</strong></h3>
-<br><br>
+<br>
 I have tried to make this plugin as robust and flexible as possible. Among these features:
 <br><br>
 <ul>
@@ -81,15 +80,15 @@ I have tried to make this plugin as robust and flexible as possible. Among these
     <li> If the plugin determines the array is too large to properly display the graph (the number of elements must be less than or equal to half of the graph's width, it will remove items from the end of the array.</li>
     <li>Graphs can handle both positive and negative numbers. In addition, graphs can plot both positive and negative points at the same time. In this case, the graph will determine a "zero point," then plot positive numbers (green, with bars pointing upwards) and negative numbers (red, pointing downwards), all from the zero point.</li>
 </ul>
-<br><br>
+<br>
 <h3><strong>Examples</strong></h3>
-<br><br>
+<br>
 My idle game at Newgrounds, <a href="http://www.newgrounds.com/portal/view/687176" target=="_blank"><em>The Townsfolk Cartel</em></a>, is the first place I used it. When playing the game, press on the "Statistics" button. The graph there shows the last 90 days or so of income, so that players can see how they're doing.
 <br><br>
 If you open the index.html page in this directory, you will see several different style of graph, all created with the plugin. The main.js file creates and updates all the graphs. The code in the create function creates five graphs, while the timerUpdate function updates three of them, along with their number arrays.
-<br><br>
+<br>
 <h3><strong>A Quick Tutorial</strong></h3>
-<br><br>
+<br>
 To demonstrate how this plugin works, I will demonstrate how to add a graph to an existing Phaser.io program. For this, I have included the code from Phaser.io that is <a href="http://phaser.io/tutorials/making-your-first-phaser-game", target="_blank">used as a tutorial for newcomers</a>. To see this, open the tutorial.html file instead of index.html. The game should start immediately.
 <br><br>
 As you can see, the game is extremely simple. You just need to move the character around with arrow keys and collect starts for points.
@@ -112,5 +111,5 @@ Suppose, for some strange reason, the game had a timer, and you wanted to see wh
 </ol>
 <br><br>
 If you succeeded, you should see a game like this. Graphing scores doesn't seem very useful, but there are many games where this will help.
-<br>
+<br><br>
 CHEAT: If you want to see the finished code for this, look for the file called "finished.html" in the assets folder. But please try to solve it yourself first.
