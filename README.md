@@ -108,7 +108,6 @@ Suppose, for some strange reason, the game had a timer, and you wanted to see wh
         <ul>
             <li>The graph should be placed in the upper-right corner, unreachable to the character.</li>
             <li>The graph should be small enough not to interfere with the game.</li>
-            
         </ul>
    </li>
    <li>Finally, you'll need to update the score graph every second. HINT: if you already made a function to handle the timed update of the score array, you should be able to include the graph update there.</li>
